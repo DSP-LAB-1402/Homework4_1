@@ -45,3 +45,19 @@ subplot(1, 2, 2)
 imshow(noisy);
 title('Noisy Image');
 
+%% 4.2.3
+kernel = ones(3, 3) / 9;
+filtered = imfilter(noisy, kernel);
+
+figure('Name', "Filtered Image");
+subplot(1, 3, 1)
+imshow(img2);
+title('Original Image');
+subplot(1, 3, 2)
+imshow(noisy);
+title('Noisy Image');
+subplot(1, 3, 3)
+imshow(filtered);
+title('Filtered Image');
+
+
