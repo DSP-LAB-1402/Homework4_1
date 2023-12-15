@@ -74,3 +74,14 @@ title('Noisy Image');
 subplot(1, 3, 3)
 imshow(filtered);
 title('Filtered Image');
+%% 4.2.5
+salt_papper_noisy = imnoise(img2, 'salt & pepper', 0.1);
+
+figure('Name', "Raw vs Noisy");
+subplot(1, 2, 1)
+imshow(img2);
+title('Original Image');
+subplot(1, 2, 2)
+imshow(salt_papper_noisy);
+title('Noisy Image');
+
