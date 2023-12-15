@@ -15,3 +15,6 @@ imshow(image)
 %% 4.1.2
 image = im2double(image);
 
+%% 4.1.3
+figure('Name', "Lenas Histogram")
+imhist(image);
