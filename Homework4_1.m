@@ -33,3 +33,15 @@ imshowpair(image, enhanced, 'montage');
 %% 4.1.5
 figure('Name', "Enhanced Lena Histogram")
 imhist(enhanced);
+%% 4.2.1, 4.2.2
+img2 = imread("./images/Image02.jpg");
+noisy = imnoise(img2, 'Gaussian', 0, .04);
+
+figure('Name', "Raw vs Noisy");
+subplot(1, 2, 1)
+imshow(img2);
+title('Original Image');
+subplot(1, 2, 2)
+imshow(noisy);
+title('Noisy Image');
+
