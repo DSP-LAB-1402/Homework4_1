@@ -84,4 +84,17 @@ title('Original Image');
 subplot(1, 2, 2)
 imshow(salt_papper_noisy);
 title('Noisy Image');
+%% 4.2.6
+kernel = ones(3, 3) / 9;
+filtered_salt_pepper = imfilter(salt_papper_noisy, kernel);
 
+figure('Name', "Filtered Image");
+subplot(1, 3, 1)
+imshow(img2);
+title('Original Image');
+subplot(1, 3, 2)
+imshow(salt_papper_noisy);
+title('Noisy Image');
+subplot(1, 3, 3)
+imshow(filtered_salt_pepper);
+title('Filtered Image');
