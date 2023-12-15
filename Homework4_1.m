@@ -30,4 +30,6 @@ title('Slice of Enhanced Image');
 
 figure('Name', "montage pair");
 imshowpair(image, enhanced, 'montage');
-
+%% 4.1.5
+figure('Name', "Enhanced Lena Histogram")
+imhist(enhanced);
