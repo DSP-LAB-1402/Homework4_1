@@ -12,3 +12,6 @@ image = imread("./images/lena.png");
 
 imshow(image)
 
+%% 4.1.2
+image = im2double(image);
+
