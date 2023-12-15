@@ -18,3 +18,16 @@ image = im2double(image);
 %% 4.1.3
 figure('Name', "Lenas Histogram")
 imhist(image);
+%% 4.1.4
+enhanced = histeq(image);
+figure('Name', "Enhanced Contrast");
+subplot(1, 2, 1)
+imshow(image(:, :, :));
+title('Slice of Original Image');
+subplot(1, 2, 2)
+imshow(enhanced(:, :, :));
+title('Slice of Enhanced Image');
+
+figure('Name', "montage pair");
+imshowpair(image, enhanced, 'montage');
+
