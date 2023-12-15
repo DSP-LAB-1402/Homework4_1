@@ -98,3 +98,13 @@ title('Noisy Image');
 subplot(1, 3, 3)
 imshow(filtered_salt_pepper);
 title('Filtered Image');
+%% 4.2.7
+load('filter.mat');
+filter_FIR = ftrans2(Num);
+figure('Name', "Filtered Image")
+subplot(2, 1, 1)
+freqz(Num);
+subplot(2, 1, 2)
+freqz2(filter_FIR);
+
+
