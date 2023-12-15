@@ -7,3 +7,8 @@
 close all;
 clear;
 clc;
+%% 4.1.1
+image = imread("./images/lena.png");
+
+imshow(image)
+
