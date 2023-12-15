@@ -107,4 +107,21 @@ freqz(Num);
 subplot(2, 1, 2)
 freqz2(filter_FIR);
 
+%% 4.2.8
+FIR_gaussian = imfilter(noisy, filter_FIR);
+FIR_salt_pepper = imfilter(salt_papper_noisy, filter_FIR);
+
+figure('Name', "Filtered Images")
+subplot(2, 2, 1)
+imshow(noisy);
+title('Noisy Image');
+subplot(2, 2, 2)
+imshow(FIR_gaussian);
+title('FIR Gaussian filter');
+subplot(2, 2, 3)
+imshow(salt_papper_noisy);
+title('Salt & Pepper Noise Image');
+subplot(2, 2, 4)
+imshow(FIR_salt_pepper);
+title('FIR salt & pepper filter');
 
